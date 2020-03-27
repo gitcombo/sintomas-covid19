@@ -1,0 +1,25 @@
+{
+  "name": "coronavid19-api",
+  "version": "1.0.0",
+  "description": "Aplicación node js para detectar covid19 através de síntomas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "api",
+    "restful",
+    "covid19"
+  ],
+  "author": "Luis André Morales Acuña",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
