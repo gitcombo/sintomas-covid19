@@ -1,0 +1,34 @@
+Documentación API
+API para mostrar porcentaje de contagio de covid19 u otras enfermedades similares a partir de síntomas ingresados.
+
+Síntomas para evaluar [ 0-100 %] 
+Siempre: 1, 	Algunas veces: 0.60,	Rara vez: 0.30,	    Nunca: 0
+1. Dificultad al respirar
+2. Fiebre
+3. Tos
+4. Dolor de cuerpo
+5. Mucosidad
+6. Estornudos
+7. Garganta
+    [respiración, fiebre, tos, cuerpo, mocos, estornudos, garganta] 
+    p.e.: [1, 0.60, 1, 0, 0.33, 1, 0]
+
+1. Obtener la probabilidad de estar contagiado de todas las enfermedades.
+[GET]:        http://localhost:3069/sintomas/[1, 0.60, 1, 0, 0.33, 1, 0]
+[RES]:  		{"resultado":{"coronavirus":0.95, "influenza":0.78, "gripe":0.20}}
+
+
+2. Obtener la probabilidad de estar contagiado de COVID19
+[GET]:		http://localhost:3069/sintomas/covid19/[1, 0.60, 1, 0, 0.33, 1, 0] 
+[RES]:          {"resultado": 0.95}
+
+
+3. Obtener la probabilidad de estar contagiado de INFLUENZA
+[GET]:		http://localhost:3069/sintomas/influenza/[1, 0.60, 1, 0, 0.33, 1, 0]
+[RES]:          {"resultado": 0.78}
+
+
+4. Obtener la probabilidad de estar contagiado de GRIPE
+[GET]:		http://localhost:3069/sintomas/gripe/[1, 0.60, 1, 0, 0.33, 1, 0]
+[RES]:          {"resultado": 0.20}
+
